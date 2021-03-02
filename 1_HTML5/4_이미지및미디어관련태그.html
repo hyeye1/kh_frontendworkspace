@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이미지 및 미디어 관련 태그 공부</title>
+</head>
+<body>
+    <h1>이미지 관련 태그</h1>
+
+    <!--
+        <img src="삽입하고자하는이미지의경로" alt="이미지설명구문" width="가로길이(px/%)" height="세로길이(px/%)"
+
+    -->
+    <h3>* src 속성과 alt 속성</h3>
+    <img src="resources/image/river1.PNG" alt="이 사진은 강사진입니다.">
+    <p>
+        * alt 목적 <br>
+        - 사진의 경로가 잘못되거나 이미지를 제대로 표현할 수 있는 경우 대체 텍스트 용도 <br>
+        - 시각 장애인분들을 위한 스크린리더(화면낭독기)에서 이미지를 읽어주는 설명 문구 <br>
+    </p>
+
+    <hr>
+
+    <h3>* width 속성과 height 속성</h3>
+    <p>
+        이미지의 가로, 세로길이 조정 가능 <br>
+        고정길이(px)(기본값), 가변길이(%)로 지정
+    </p>
+
+    <h4>고정길이단위(px) : 화면 사이즈가 조정이 되어도 이미지의 크기는 변동없음</h4>
+    <img src="resources/image/flower1.PNG" alt="이 사진은 꽃사진입니다." width="200px" height="150px">
+    <img src="resources/image/flower2.PNG" alt="이 사진은 꽃사진입니다." width="200px" height="150px">
+    <img src="resources/image/flower3.PNG" alt="이 사진은 꽃사진입니다." width="200px" height="150px">
+    <img src="resources/image/flower4.PNG" alt="이 사진은 꽃사진입니다." width="200px" height="150px">
+    <img src="resources/image/flower5.PNG" alt="이 사진은 꽃사진입니다." width="200px" height="150px">
+
+    <br>
+
+    <h4>가변길이단위(%) : 화면 사이즈 또는 부모요소사이즈에 따라 이미지의 크기도 같이 변동됨</h4>
+    <img src="resources/image/flower1.PNG" alt="이 사진은 꽃사진입니다." width="15%" height="150px">
+    <img src="resources/image/flower2.PNG" alt="이 사진은 꽃사진입니다." width="15%" height="150px">
+    <img src="resources/image/flower3.PNG" alt="이 사진은 꽃사진입니다." width="15%" height="150px">
+    <img src="resources/image/flower4.PNG" alt="이 사진은 꽃사진입니다." width="15%" height="150px">
+    <img src="resources/image/flower5.PNG" alt="이 사진은 꽃사진입니다." width="15%" height="150px">
+
+    <hr>
+
+    <h1>미디어 관련태그</h1>
+
+    <h3>오디오 관련 태그</h3>
+    <!--
+        <audio src="" controls autoplay loop></audio>
+
+        src : 오디오 경로
+        controls : 재생도구 출력 여부
+        autoplay : 자동재생여부
+        loop : 반복여부
+    -->
+    <audio src="resources/audio/major.mp3" controls autoplay loop></audio>
+
+    <hr>
+    <!--
+        <video src="" controls autoplay loop width="" height="" poster=""></video>
+    -->
+    <video src="resources/video/video1.mp4" controls autoplay loop width="200px" height="150px"  poster="resources/image/flower1.PNG"></video>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
