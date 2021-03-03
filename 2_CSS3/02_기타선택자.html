@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>기타선택자 공부</title>
+        <link href="resources/css/02.css" rel="stylesheet">
+        <!--
+            외부 스타일 방식 : 스타일 정보만을 따로 관리하는 .css 외부문서를 만들고
+                              link태그를 통해 연결시켜주는 방법
+        -->
+    </head>
+    <body>
+
+        <h2>1. 속성 선택자</h2>
+        <p>
+            - 태그내에 기술되어있는 속성을 가지고 요소를 선택하는 방법 <br>
+            - 기본 선택자 뒤에 []를 사용해서 속성과 속성값을 사용하여 요소 선택
+        </p>
+        <pre>
+        선택자[속성=속성값]{스타일속성:값;}
+        선택자[속성~=속성값]{스타일속성:값;}
+        선택자[속성|=속성값]{스타일속성:값;}
+        선택자[속성^=속성값]{스타일속성:값;}
+        선택자[속성$=속성값]{스타일속성:값;}
+        선택자[속성*=속성값]{스타일속성:값;}
+        </pre>
+
+        <div class="div-class" name="name1">div1</div>
+        <div class="div-class" name="name2">div2</div>
+        <div class="div-class" name="name3 name1">div3</div>
+        <div class="class-div" name="name3">div4</div>
+
+        <hr>
+
+        <h2>2. 자손선택자 후손선택자</h2>
+        <p>자손 : 바로 하위요소들 / 후손 : 하위요소들 전부</p>
+        <pre>
+        * 자손선택자 (>)
+        a>b {
+            스타일속성:값;
+        }
+        * 후손선택자 ( )
+        a b {
+            스타일속성:값;
+        }
+        </pre>
+
+        <div id="test1">
+            <h4>자손입니다.</h4>
+            <h4>자손입니다.</h4>
+            <ul>자손입니다.
+                <li>나는 ul의 자손이면서 div의 후손입니다.</li>
+                <li>나는 ul의 자손이면서 div의 후손입니다.</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>3. 동위 선택자</h2>
+        <p>- 동위 관계(같은 레벨)에 있는 요소들 중에 뒤쪽에 위치한 특정 요소만을 선택할 때 사용</p>
+        <pre>
+        * a요소 뒤에 있는 b요소 "하나만"을 선택
+        a+b{
+            스타일속성:값;
+        }
+
+        * a요소 뒤에 있는 "모든" b요소 다 선택
+        a~b{
+            스타일속성:값;
+        }
+        </pre>
+
+        <!--div{div$}*4-->
+        <div id="test2">div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <ul>ul요소</ul>
+
+        <hr>
+
+        <h2>4. 반응 선택자</h2>
+        <pre>
+        * 해당 선택된 요소에 "클릭"이 되었을 경우 스타일 반영
+        선택자:active{
+            스타일속성:값;
+        }
+
+        * 해당 선택된 요소에 "마우스를 갖다대는 순간" 스타일 반영
+        선택자:hover{
+            스타일속성:값;
+        }
+        </pre>
+
+        <div id="active-test" class="area">active테스트</div>
+        <br>
+        <div id="hover-test" class="area">hover테스트</div>
+
+        
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>

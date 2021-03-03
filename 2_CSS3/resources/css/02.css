@@ -1,0 +1,41 @@
+/* CSS영역 (스타일정보 바로 기술할 수 있는 영역) */
+h2{
+    color: red;
+}
+
+
+/**/
+div[name=name1]{
+    background-color: orangered;
+}
+/**/
+div[name~=name1]{
+    background-color: yellow;
+}
+/* div중에서 class속성값이 class로 "시작"되는 요소 (-로구분) */
+div[class|=class]{
+    background-color: cyan;
+}
+/* div중에서 name속성값이 na로 "시작되는 요소*/
+div[name^=na]{
+    background-color: blue;
+}
+/* div중에서 class속성값이 ss로 "끝"나는 요소 */
+div[class$=ss]{
+    color: white;
+}
+/* div중에서 class속성값에 i가 "포함"되어있는 요소*/
+div[class*=i]{
+    color: red;
+    background-color: yellow;
+}
+
+div[name|=name3]{
+    font-size:20px;
+}
+
+/* 응용 : class속성값이 div-class 중에서 name속성값에 name3가 포함되어있는 요소 */
+.div-class[name~=name3]{
+    background-color: pink;
+}
+/*-----------------------------------------------------------------------------*/
