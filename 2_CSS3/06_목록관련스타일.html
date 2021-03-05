@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록관련스타일 공부</title>
+    <style>
+        #ul1{
+            list-style-type:none;
+        }
+        #ol1{
+            list-style-position:inside;
+            /*list-style-type:none;*/
+        }
+        #image-bullet{
+            list-style-image:url("resources/image/iconsample.png");
+            list-style-position:inside;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">목록관련 스타일 (list-style~)</h1>
+
+    <h3>list-style-type : 목록의 불릿기호를 변경시켜줄 때 사용</h3>
+    <pre>
+    * 순서 없는 목록 (ul) 
+    선택자{
+        list-style-type:disc(기본값)|circle|square|none;
+    }
+
+    * 순서 있는 목록 (ol)
+    선택자{
+        list-style-type:decimal(기본값)|decimal-leading-zero;
+        list-style-type:lower-alpha|upper-alpha;
+        list-style-type:lower-roman|upper-roman;
+    }
+    </pre>
+
+    <ul id="ul1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+    </ul>
+
+    <ol id="ol1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+    </ol>
+
+    <hr>
+
+    <h3>
+        list-style-position : 불릿기호의 위치를 조정할 때 사용 <br>
+        list-style-image : 불릿기호로 이미지를 적용하고자 할때 사용
+    </h3>
+    <pre>
+    선택자{
+        list-style-position:outside(기본값)|inside;
+        list-style-image:url(적용시키고자하는이미지경로);
+    }
+    </pre>
+
+    <ul id="image-bullet">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+    </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역 관련 스타일 공부</title>
+    <style>
+        .test{
+            background-color:yellow;
+            width:100px;
+            height:100px;
+            border:10px solid black;
+        }
+        #test1{
+            padding:100px;
+        }
+        #test2{
+            padding-top:50px;
+            padding-left:100px;
+        }
+        #test3{
+                  /* 위아래 좌우*/
+            /*padding:50px 20px;*/
+
+            /* 위에서 부터 (시계방향)*/
+            padding:50px 30px 20px 0px;
+        }
+
+        #test4{
+            margin:20px;
+        }
+        #test5{
+            margin-top:50px;
+            margin-left:70px;
+        }
+        #test6{
+            margin:50px 30px 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>여백 및 간격 관련 스타일</h1>
+
+    <h4>기준div</h4>
+    <div class="test">기준 div</div>
+
+    <h3>padding</h3>
+    <p>테두리영역(border)과 내용물영역(content)사이의 거리(여백)을 조절하는 스타일속성</p>
+
+
+    <div id="test1" class="test">컨텐츠영역</div> <br>
+    <div id="test2" class="test">컨텐츠영역</div> <br>
+    <div id="test3" class="test">컨텐츠영역</div> <br>
+
+    <hr>
+
+    <h3>margin</h3>
+    <p>타 요소들간의 간격을 조정할 때 사용</p>
+
+    <div id="test4" class="test">컨텐츠영역</div>
+    <div id="test5" class="test">컨텐츠영역</div>
+    <div id="test6" class="test">컨텐츠영역</div>
+
+    <hr>
+
+    <div class="test" style="margin:auto;">가운데배치</div>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+</body>
+</html>

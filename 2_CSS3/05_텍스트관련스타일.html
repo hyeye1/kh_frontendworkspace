@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트관련스타일 공부</title>
+    <style>
+        #c-name{color:red;}
+        #c-16{color:#FFDF24;}
+        #c-rgb{color:rgb(70, 180, 75);}
+        #c-rgba{color:rgba(187, 127, 74, 0.26);}
+        #c-hsl{color:hsl(200, 59%, 77%);} /*h:색상값(0~360)  s:채도(%)  l:명도(%)*/
+        #c-hsla{color:hsla(200, 59%, 77%, 0.2)}
+
+        #td1{text-decoration:underline;}
+        #td2{text-decoration:line-through;}
+        #td3{text-decoration:overline;}
+
+        #tt1{text-transform:uppercase;}
+        #tt2{text-transform:lowercase;}
+        #tt3{text-transform:capitalize;}
+
+        #ta1{text-align:left;}
+        #ta2{text-align:justify;}
+        #ta3{text-align:right;}
+        #ta4{text-align:center;}
+
+        div>span{
+            font-size:50px;
+            font-weight:900;
+        }
+        #ts1{
+            color:orangered;
+            text-shadow:5px 5px 10px yellow;
+        }
+        #ts2{
+            color:green;
+            text-shadow:-5px -5px 10px yellow;
+        }
+        #ts3{
+            color:white;
+            text-shadow:0px 0px 10px black;
+        }
+        #ts4{
+            text-shadow:0px 0px 4px gray, 0px -5px 4px yellow, 0px -10px 8px orange, 0px -15px 15px orangered, 0px -22px 20px red;   
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 관련 스타일 (text~)</h1>
+
+    <h3>color : 텍스트의 색상을 지정</h3>
+    <pre>
+    선택자 {
+        color:색상명|16진수|rgb|rgba|hsl|hsla;
+    }
+    </pre>
+
+    <ul>
+        <li id="c-name">색상명으로 지정</li>
+        <li id="c-16">16진수로 지정</li>
+        <li id="c-rgb">rgb로 지정</li>
+        <li id="c-rgba">rgba로 지정</li>
+        <li id="c-hsl">hsl로 지정</li>
+        <li id="c-hsla">hsla로 지정</li>
+    </ul>
+
+    <hr>
+
+    <h3>text-decoration : 텍스트에 줄을 긋거나 줄을 없앨 때 사용</h3>
+    <pre>
+    선택자{
+        text-decoration:none|underline|overline|line-through;
+    }
+    </pre>
+
+    <ul>
+        <li id="td1">텍스트 영역 아래 줄 긋기</li>
+        <li id="td2">텍스트 영역 중간에 줄 긋기</li>
+        <li id="td3">텍스트 영역 위에 줄 긋기</li>
+    </ul>
+
+    <a href="http://www.naver.com" style="text-decoration:none;">네이버로 이동</a>
+    <!-- a 태그는 기본적인 스타일로 text-decoration:underline; -->
+
+    <hr>
+
+    <h3>text-transform : 영문 텍스트의 대소문자 변환시 사용</h3>
+    <pre>
+    선택자{
+        text-tranform:uppercase|lowercase|capitalize;
+    }
+    </pre>
+
+    <ul>
+        <li id="tt1">uppercase : 모든 영문자 다 대문자로</li>
+        <li id="tt2">LOwerCase : 모든 영문자 다 소문자로</li>
+        <li id="tt3">capitalize : 영문자의 firsttext만 대문자로</li>
+    </ul>
+    
+    <hr>
+
+    <h3>text-align : 텍스트 정렬할 때 사용</h3>
+    <pre>
+    선택자 {
+        text-align:left(기본값)|right|center|justify;
+    }
+    </pre>
+
+    <h4>왼쪽정렬(기본값)</h4>
+    <p id="ta1">
+        천하를 찬미를 역사를 얼마나 수 속에 위하여서. 곳으로 예수는 전인 반짝이는 가는 주며, 인간은 이 이것이다. 못할 같이, 수 칼이다. 소담스러운 이상 피가 장식하는 같이, 동산에는 황금시대의 하는 부패뿐이다. 청춘에서만 것은 이는 인생을 내는 뼈 실현에 사는가 그리하였는가? 품으며, 우리 새 커다란 이상 용기가 꽃이 풍부하게 말이다. 우리의 목숨이 반짝이는 장식하는 하는 충분히 무한한 듣는다. 따뜻한 있는 청춘 뼈 찾아 이상, 석가는 봄바람이다. 보이는 시들어 뭇 목숨이 역사를 얼마나 이상의 광야에서 아름다우냐?
+
+열락의 우리의 때에, 원대하고, 운다. 이것을 전인 이상 현저하게 이상의 황금시대다. 인간의 할지니, 목숨을 위하여서, 청춘에서만 있다. 이상이 인생의 소리다.이것은 같으며, 바이며, 피다. 지혜는 끓는 살 것이 내려온 고동을 꽃 예가 내는 끓는다. 끓는 속에 이상 구할 굳세게 그들은 그러므로 동산에는 봄바람이다. 아니더면, 얼마나 우리 사라지지 몸이 날카로우나 운다. 인생에 어디 있는 것이다. 청춘의 있는 이상을 투명하되 하였으며, 봄바람이다.
+    </p>
+
+    <h4>양쪽정렬</h4>
+    <p id="ta2">
+        천하를 찬미를 역사를 얼마나 수 속에 위하여서. 곳으로 예수는 전인 반짝이는 가는 주며, 인간은 이 이것이다. 못할 같이, 수 칼이다. 소담스러운 이상 피가 장식하는 같이, 동산에는 황금시대의 하는 부패뿐이다. 청춘에서만 것은 이는 인생을 내는 뼈 실현에 사는가 그리하였는가? 품으며, 우리 새 커다란 이상 용기가 꽃이 풍부하게 말이다. 우리의 목숨이 반짝이는 장식하는 하는 충분히 무한한 듣는다. 따뜻한 있는 청춘 뼈 찾아 이상, 석가는 봄바람이다. 보이는 시들어 뭇 목숨이 역사를 얼마나 이상의 광야에서 아름다우냐?
+
+열락의 우리의 때에, 원대하고, 운다. 이것을 전인 이상 현저하게 이상의 황금시대다. 인간의 할지니, 목숨을 위하여서, 청춘에서만 있다. 이상이 인생의 소리다.이것은 같으며, 바이며, 피다. 지혜는 끓는 살 것이 내려온 고동을 꽃 예가 내는 끓는다. 끓는 속에 이상 구할 굳세게 그들은 그러므로 동산에는 봄바람이다. 아니더면, 얼마나 우리 사라지지 몸이 날카로우나 운다. 인생에 어디 있는 것이다. 청춘의 있는 이상을 투명하되 하였으며, 봄바람이다.
+    </p>
+
+    <h4>오른쪽정렬</h4>
+    <p id="ta3">
+        천하를 찬미를 역사를 얼마나 수 속에 위하여서. 곳으로 예수는 전인 반짝이는 가는 주며, 인간은 이 이것이다. 못할 같이, 수 칼이다. 소담스러운 이상 피가 장식하는 같이, 동산에는 황금시대의 하는 부패뿐이다. 청춘에서만 것은 이는 인생을 내는 뼈 실현에 사는가 그리하였는가? 품으며, 우리 새 커다란 이상 용기가 꽃이 풍부하게 말이다. 우리의 목숨이 반짝이는 장식하는 하는 충분히 무한한 듣는다. 따뜻한 있는 청춘 뼈 찾아 이상, 석가는 봄바람이다. 보이는 시들어 뭇 목숨이 역사를 얼마나 이상의 광야에서 아름다우냐?
+
+열락의 우리의 때에, 원대하고, 운다. 이것을 전인 이상 현저하게 이상의 황금시대다. 인간의 할지니, 목숨을 위하여서, 청춘에서만 있다. 이상이 인생의 소리다.이것은 같으며, 바이며, 피다. 지혜는 끓는 살 것이 내려온 고동을 꽃 예가 내는 끓는다. 끓는 속에 이상 구할 굳세게 그들은 그러므로 동산에는 봄바람이다. 아니더면, 얼마나 우리 사라지지 몸이 날카로우나 운다. 인생에 어디 있는 것이다. 청춘의 있는 이상을 투명하되 하였으며, 봄바람이다.
+    </p>
+
+    <h4>가운데정렬</h4>
+    <p id="ta4">
+        천하를 찬미를 역사를 얼마나 수 속에 위하여서. 곳으로 예수는 전인 반짝이는 가는 주며, 인간은 이 이것이다. 못할 같이, 수 칼이다. 소담스러운 이상 피가 장식하는 같이, 동산에는 황금시대의 하는 부패뿐이다. 청춘에서만 것은 이는 인생을 내는 뼈 실현에 사는가 그리하였는가? 품으며, 우리 새 커다란 이상 용기가 꽃이 풍부하게 말이다. 우리의 목숨이 반짝이는 장식하는 하는 충분히 무한한 듣는다. 따뜻한 있는 청춘 뼈 찾아 이상, 석가는 봄바람이다. 보이는 시들어 뭇 목숨이 역사를 얼마나 이상의 광야에서 아름다우냐?
+
+열락의 우리의 때에, 원대하고, 운다. 이것을 전인 이상 현저하게 이상의 황금시대다. 인간의 할지니, 목숨을 위하여서, 청춘에서만 있다. 이상이 인생의 소리다.이것은 같으며, 바이며, 피다. 지혜는 끓는 살 것이 내려온 고동을 꽃 예가 내는 끓는다. 끓는 속에 이상 구할 굳세게 그들은 그러므로 동산에는 봄바람이다. 아니더면, 얼마나 우리 사라지지 몸이 날카로우나 운다. 인생에 어디 있는 것이다. 청춘의 있는 이상을 투명하되 하였으며, 봄바람이다.
+    </p>
+
+    <hr>
+
+    <h3>text-shadow : 텍스트에 그림자효과를 줄 때 사용</h3>
+    <pre>
+    선택자{
+        text-shadow: 가로거리(x) 세로거리(y) [번짐정도] [색상];
+    }
+    </pre>
+
+    <div>
+        <span id="ts1">HTML5</span> <br><br><br>
+        <span id="ts2">HTML5</span> <br><br><br>
+        <span id="ts3">HTML5</span> <br><br><br>
+        <span id="ts4">HTML5</span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

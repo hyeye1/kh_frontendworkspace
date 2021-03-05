@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>글꼴 관련 스타일 공부</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <style>
+            #ff1{font-family:궁서체;}
+            #ff2{font-family:고딕체;}
+            #ff3{font-family:보람체, 궁서체;} /* 첫번째로 제시한 글꼴이 없을경우 그 다음 글꼴로 적용 */
+        
+            #web-font{
+                font-family: 'Nanum Pen Script', cursive;
+                font-size:30px;
+            }
+
+            #fs1{font-size:30px;}
+            #fs2{font-size:1.5em;} /* 배수 */
+            #fs3{font-size:50%;}
+
+            li{font-size:30px;}
+
+            #fw1{font-weight:normal;}
+            #fw2{font-weight:bold;}
+            #fw3{
+                /*font-weight:bolder;*/
+                font-weight:900;
+            }
+            #fw4{
+                /*font-weight:lighter;*/
+                font-weight:100;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>글꼴 관련 스타일 속성 (font~)</h1>
+
+        <h3>font-family : 글꼴을 지정할 때 사용</h3>
+        <pre>선택자 { font-family:글꼴명; }</pre>
+
+        <!-- p[id=ff$]{글꼴 테스트$}*3 -->
+        <p id="ff1">글꼴 테스트1</p>
+        <p id="ff2">글꼴 테스트2</p>
+        <p id="ff3">글꼴 테스트3</p>
+
+        <h3>* 외부 웹 폰트 사용법</h3>
+        <p>
+            웹 폰트 제공 사이트 : 
+            <a href="http://fonts.google.com" target="_blank">구글 웹 폰트 사이트</a>
+        </p>
+
+        <p id="web-font">font style test 글꼴테스트!@# 123</p>
+
+        <hr>
+
+        <h3>font-size : 글꼴의 크기를 변경할 때 사용</h3>
+        <pre>선택자 {font-size:크기(px|em|%);}</pre>
+
+        <ul>
+            <li id="fs1">px 고정크기</li>
+            <li id="fs2">em 가변크기</li>
+            <li id="fs3">% 가변크기</li>
+        </ul>
+
+        <hr>
+
+        <h3>font-weight : 글꼴의 굵기를 변경할 때 사용</h3>
+        <pre>
+        선택자{
+            font-weight:normal(기본값)|bold|bolder|lighter|100|400|900;
+        }
+        </pre>
+
+        <ul>
+            <li id="fw1">원래 굵기</li>
+            <li id="fw2">굵은 글꼴로 변경</li>
+            <li id="fw3">원래 굵기보다 더 굵게</li>
+            <li id="fw4">원래 굵기보다 더 가늘게</li>
+        </ul>
+
+        <hr>
+
+        <h3>font-variant : 문구를 작은대문자로 변경할 때 사용</h3>
+        <pre>선택자{font-variant:small-caps;}</pre>
+
+        <p>I LOVE YOU</p>
+        <p style="font-variant:small-caps;">i love you</p>
+
+        <hr>
+
+        <h3>font-style : 문구를 기울이고자 할 때 사용</h3>
+        <pre>선택자{font-style:normal|italic|oblique;}</pre>
+
+        <ul>
+            <li style="font-style:italic">italic 기울임 글꼴</li>
+            <li style="font-style:oblique">oblique 원래글자를 기울인셈</li>
+        </ul>
+
+        <em>기울임</em>
+
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </body>
+</html>

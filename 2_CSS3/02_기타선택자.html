@@ -95,6 +95,71 @@
         <br>
         <div id="hover-test" class="area">hover테스트</div>
 
+        <hr>
+
+        <h2>5. 상태 선택자</h2>
+        <p>요소의 상태에 따라서 선택되는 선택자</p>
+
+        <pre>
+        1) checked(체크된) 상태의 요소
+        선택자:checked{
+            스타일속성:값;
+        }
+        </pre>
+
+        <input type="checkbox" id="apple">
+        <label for="apple">사과</label>
+
+        <input type="checkbox" id="banana">
+        <label for="banana">바나나</label>
+
+        <br>
+
+        <pre>
+        2) 초점(focus)이 맞춰진 input요소 선택
+        선택자:focus{
+            스타일속성:값;
+        }
+        </pre>
+
+        <label for="userId">아이디 : </label>
+        <input type="text" id="userId" name="userId" placeholder="아이디 입력" required> <br>
+
+        <label for="userPwd">비밀번호 : </label>
+        <input type="password" id="userPwd" name="userPwd" required placeholder="비밀번호 입력">
+
+        <br>
+
+        <pre>
+        3) 활성화된 요소만을 선택
+        선택자:enabled{
+            스타일속성:값;
+        }
+        4) 비활성된 요소만을 선택
+        선택자:disabled{
+            스타일속성:값;
+        }
+        </pre>
+
+        <button>클릭가능</button>
+        <button disabled>클릭불가능</button>
+
+        <br>
+
+        옵션선택 : 
+        <select>
+            <option value="">선택안함</option>
+            <option value="" disabled>카키 s [품절]</option>
+            <option value="">카키 m</option>
+            <option value="">카키 l</option>
+        </select>
+
+        
+
+
+
+
+
         
 
 
