@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경관련스타일 공부</title>
+    <style>
+        body{background-color: skyblue;}
+        #div-bg{
+            background-color: white;
+            width:50%;
+            border: 30px solid blue;
+            padding: 20px;
+        }
+
+        .div-test{
+            margin:30px;
+            border:10px dashed black;
+            padding:20px;
+            background-color: yellow;
+        }
+
+        #div1{background-clip: border-box;} /*기본값*/
+        #div2{background-clip: padding-box;}
+        #div3{background-clip: content-box;}
+
+        #bg-img{
+            width:70%;
+            height:800px;
+            border:1px solid black;
+
+            background-image: url("resources/image/bgsample.PNG");
+
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>배경 관련 스타일 (background~)</h1>
+
+    <h3>background-color : 배경색 지정하고자 할 때 사용</h3>
+
+    <div id="div-bg">
+        같이, 대중을 끝에 인생의 듣는다. 물방아 그림자는 실현에 우리 있는 두손을 설산에서 트고, 힘있다. 천하를 청춘 유소년에게서 이것을 영락과 청춘의 실로 위하여, 앞이 것이다. 꽃 인생을 이상은 주며, 작고 같은 위하여 위하여서, 황금시대다. 고행을 착목한는 풀밭에 것이다. 우는 천지는 투명하되 운다. 같이, 영락과 것이다.보라, 부패뿐이다. 역사를 때에, 같은 이상 시들어 부패를 피고 무한한 풍부하게 이것이다. 가치를 그들의 얼마나 이상, 수 찾아다녀도, 가치를 같이, 쓸쓸하랴? 우리 청춘에서만 청춘은 이상 봄바람이다. 두기 우리 더운지라 청춘은 이상 것이다.
+    </div>
+
+    <hr>
+    <h3>background-clip : 배경을 적용시키고자하는 범위를 지정할 때 사용</h3>
+    <pre>
+        선택자{
+            background-clip:border-box(기본값)|padding-box|content-box;
+        }
+    </pre>
+
+    <div class="div-test" id="div1">
+        같이, 대중을 끝에 인생의 듣는다. 물방아 그림자는 실현에 우리 있는 두손을 설산에서 트고, 힘있다. 천하를 청춘 유소년에게서 이것을 영락과 청춘의 실로 위하여, 앞이 것이다. 꽃 인생을 이상은 주며, 작고 같은 위하여 위하여서, 황금시대다. 고행을 착목한는 풀밭에 것이다. 우는 천지는 투명하되 운다. 같이, 영락과 것이다.보라, 부패뿐이다. 역사를 때에, 같은 이상 시들어 부패를 피고 무한한 풍부하게 이것이다. 가치를 그들의 얼마나 이상, 수 찾아다녀도, 가치를 같이, 쓸쓸하랴? 우리 청춘에서만 청춘은 이상 봄바람이다. 두기 우리 더운지라 청춘은 이상 것이다.
+    </div>
+
+    <div class="div-test" id="div2">
+        같이, 대중을 끝에 인생의 듣는다. 물방아 그림자는 실현에 우리 있는 두손을 설산에서 트고, 힘있다. 천하를 청춘 유소년에게서 이것을 영락과 청춘의 실로 위하여, 앞이 것이다. 꽃 인생을 이상은 주며, 작고 같은 위하여 위하여서, 황금시대다. 고행을 착목한는 풀밭에 것이다. 우는 천지는 투명하되 운다. 같이, 영락과 것이다.보라, 부패뿐이다. 역사를 때에, 같은 이상 시들어 부패를 피고 무한한 풍부하게 이것이다. 가치를 그들의 얼마나 이상, 수 찾아다녀도, 가치를 같이, 쓸쓸하랴? 우리 청춘에서만 청춘은 이상 봄바람이다. 두기 우리 더운지라 청춘은 이상 것이다.
+    </div>
+
+    <div class="div-test" id="div3">
+        같이, 대중을 끝에 인생의 듣는다. 물방아 그림자는 실현에 우리 있는 두손을 설산에서 트고, 힘있다. 천하를 청춘 유소년에게서 이것을 영락과 청춘의 실로 위하여, 앞이 것이다. 꽃 인생을 이상은 주며, 작고 같은 위하여 위하여서, 황금시대다. 고행을 착목한는 풀밭에 것이다. 우는 천지는 투명하되 운다. 같이, 영락과 것이다.보라, 부패뿐이다. 역사를 때에, 같은 이상 시들어 부패를 피고 무한한 풍부하게 이것이다. 가치를 그들의 얼마나 이상, 수 찾아다녀도, 가치를 같이, 쓸쓸하랴? 우리 청춘에서만 청춘은 이상 봄바람이다. 두기 우리 더운지라 청춘은 이상 것이다.
+    </div>
+
+    <hr>
+
+    <h3>배경 이미지 테스트</h3>
+    <pre>
+        선택자{
+            background-image:url(이미지경로);
+        }
+    </pre>
+    
+    <div class="div-test" id="bg-img"></div>
+
+
+
+    <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>
+</body>
+</html>
