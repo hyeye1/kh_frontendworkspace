@@ -6,19 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         div{
             border:1px solid red;
-            box-sizing:border-box;
+            box-sizing: border-box;
         }
         .wrap{
+           
             width: 1000px;
             height: 800px;
-            margin:auto;
+            margin: auto;
         }
+
+        .wrap>div{
+            width: 100%;
+        }
+        #header{height: 20%;}
+        #content{height: 60%;}
+        #footer{height:20%;}
+
+        #content>div{
+            height:100%;
+            float: left;
+        }
+        #content_1{width:20%;}
+        #content_2{width:80%;}
+        
     </style>
 </head>
 <body>
-    
     <div class="wrap">
 
         <div id="header"></div>
@@ -27,8 +43,7 @@
             <div id="content_2"></div>
         </div>
         <div id="footer"></div>
-
-
+        
     </div>
 </body>
 </html>
