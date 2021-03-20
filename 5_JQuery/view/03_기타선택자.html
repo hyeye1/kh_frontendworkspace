@@ -213,9 +213,23 @@
         })
     </script>
 
+    <h4>- disabled, enabled 상태 선택자 (input요소들, button요소들)</h4>
 
+    <div id="wrap">
+        활성화텍스트상자 : <input type="text"> <br>
+        비활성화텍스트상자 : <input type="text" disabled> <br>
 
+        활성화버튼 : <input type="button" value="활성화버튼"> <br>
+        비활성화버튼 : <input type="button" value="비활성화버튼" disabled> <br>
 
+    </div>
+
+    <script>
+        $(function(){
+            $("#wrap>input:enabled").css("backgroundColor", "yellowgreen");
+            $("#wrap>:disabled").css("backgroundColor", "orangered");
+        })
+    </script>
 
 
 
