@@ -7,15 +7,15 @@
     <title>Document</title>
     <style>
         .purpleStyle{
-            background-color: purple;
+            background:purple;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <h3> * 자손선택자(>)와 후손선택자( )</h3>
+    <h3>* 자손선택자(>)와 후손선택자( )</h3>
 
-    <div style="border: 1px solid lightgray;">조상
+    <div style="border:1px solid lightgray">조상
         <ul>자손1
             <li>div의 후손이면서 ul의 자손1</li>
             <li>div의 후손이면서 ul의 자손2</li>
@@ -31,7 +31,7 @@
 
     <script>
         $(document).ready(function(){
-            $("div>h3").css("color", "violet");
+            $("div>h3").css("color","blue");
             $("div h3").css("backgroundColor", "lightblue");
 
             //$("ul h3")
@@ -39,20 +39,20 @@
             $("div>ul h3").css("color", "red");
 
             $("ul>.ch").css("backgroundColor", "yellow");
-            $("li.ch").css("color", "pink");
+            $("li.ch").css("color","pink");
         })
     </script>
 
     <hr>
 
-    <h3> * 속성선택자</h3>
+    <h3>* 속성선택자</h3>
     <p>
         선택자[속성] : 특정 속성을 가지고 있는 모든 요소 선택 <br>
         선택자[속성=속성값] : 속성안의 값이 특정값과 "일치"하는 모든 요소 선택 <br>
         선택자[속성~=속성값] : 속성안의 값에 특정값을 "단어로써 포함"하는 모든 요소 선택 <br>
         선택자[속성*=속성값] : 속성안의 값에 특정값을 "포함"하는 모든 요소 선택 <br>
         선택자[속성^=속성값] : 속성안의 값이 특정값으로 "시작"하는 모든 요소 선택 <br>
-        선택자[속성$=속성값] : 속성안의 값이 특정값으로 "끝"나는 모든 요소 선택 
+        선택자[속성$=속성값] : 속성안의 값이 특정값으로 "끝"나는 모든 요소 선택
     </p>
 
     <input type="text"> <br>
@@ -64,102 +64,109 @@
     <script>
         $(document).ready(function(){
 
-            // $("input[class]").css("backgroundColor", "red");
+            /*
+            $("input[class]").css("backgroundColor", "red");
 
-            // // 선택된 input요소객체.value="";
-            // $("input[type=text]").val("change value");
-            // $("input[class~=test").val("1234");
-            // // val() : value속성과 관련된 기능 수행
+            // 선택된input요소객체.value = "";
+            $("input[type=text]").val("change value");
+            $("input[class~=test]").val("1234");
+            // val() : value속성과 관련된 기능 수행
 
-            // // $("input[class*=st2]").css("width", "100px");
-            // // $("input[class*=st2]").css("height", "100px");
-            // // $("input[class*=st2]").css("버튼");
-            // $("input[class*=st2]".css("width", "100px").css("heights", "100px").val("버튼");
+            //$("input[class*=st2]").css("width","100px");
+            //$("input[class*=st2]").css("height","100px");
+            //$("input[class*=st2]").val("버튼");
+            $("input[class*=st2]").css("width","100px").css("height","100px").val("버튼");
 
-            
-            // // style속성 => css()
-            // // value속성 => val()
-            // // innerHTML속성 => hteml()
-            // // innerText속성 => text()
-            // // 그 외 속성 => attr()
+            // style속성 => css()
+            // value속성 => val()
+            // innerHTML속성 => html()
+            // innerText속성 => text()
+            // 그 외 속성 => attr()
 
-            // $("")
-    
-
-            
+            $("input[type^=ra]").attr("checked", true);
+            $("input[type$=box]").attr("checked", true);
+            */
         })
     </script>
 
     <hr>
 
-    <h3> * 입력양식 선택자 (input태그들의 type속성에 따라서도 요소선택)</h3>
+    <h3>* 입력양식 선택자 (input태그들의 type속성에 따라서도 요소선택)</h3>
 
     텍스트상자 : <input type="text"> <br>
-    일반버튼 : <input type="button" > <br>
+    일반버튼 : <input type="button"> <br>
     체크박스 : <input type="checkbox"> <br>
     첨부파일 : <input type="file"> <br>
-    패스워드 : <input type="password" > <br>
-    라디오버튼 : <input type="radio" > <br>
-    초기화버튼 : <input type="reset" > <br>
-    제출버튼 : <input type="submit" > <br>
+    패스워드 : <input type="password"> <br>
+    라디오버튼 : <input type="radio"> <br>
+    초기화버튼 : <input type="reset"> <br>
+    제출버튼 : <input type="submit"> <br>
 
     <script>
-        /*
         $(function(){
+            /*
             $(":text").css("backgroundColor", "red");
 
-            // $(":button").css("width", "100px").css("height", "100px").val("왕버튼");
+            //$(":button").css("width","100px").css("height","100px").val("왕버튼");
             $(":button").css({"width":"100px", "height":"100px"}).val("왕버튼");
-            
-            // 체크박스 : checked속성추가, 가로길이 50px, 세로길이 50px
-            // $(":checkbox").attr("checked", true).css({"width":"50px", "height":"50px"})
 
-            // 첨부파일 : 배경을 연두색으로
+            // 체크박스 : checked속성추가, 가로길이50px, 세로길이 50px
+            $(":checkbox").attr("checked",true).css({"width":"50px", "height":"50px"});
+
+            // 첨부파일 : 배경색을 연두색으로
             $(":file").css("backgroundColor", "yellowgreen");
 
-            // 패스워드 : 배경을 노란색으로
+            // 패스워드 : 배경색을 노란색으로
             $(":password").css("backgroundColor", "yellow");
 
-            // 라디오버튼 : checked속성 추가
+            // 라디오버튼 : checked속성추가
             $(":radio").attr("checked", true);
 
-            // 초기화버튼 : 배경을 파란색, 글자색을 흰색, 테두리 없애기
+            // 초기화버튼 : 배경색을 파란색, 글자색을 흰색, 테두리 없애기
             $(":reset").css({
                 backgroundColor:"blue",
                 color:"white",
                 border:"none"
             }).val("취소");
+            */
 
-            // 제출버튼 : 클릭시 alert뜨게끔 (크릭이벤트핸들러)
+            // 제출버튼 : 클릭시 alert뜨게끔 (클릭이벤트핸들러)
             $(":submit").click(function(){
+                //alert("ㅋㅋㅋ");
                 alert($(":password").val());
             });
 
-            // mouseenter : 선택된 요소의 경계내부로 마우스가 들어간 순간 이벤틉 ㅏㄹ생
+            /*
+            // mouseenter : 선택된 요소의 경계내부로 마우스가 들어간 순간 이벤트 발생
             $(":submit").mouseenter(function(){
-
-              //  $(this).css("backgroundColor", "purple");
-              $(this).addClass("purpleStyle");
+                //$(this).css("backgroundColor", "purple");
+                $(this).addClass("purpleStyle");
+                // addClass() 메소드 : 클래스 추가해주는 메소드
             });
 
-            // mouseout : 선택된 요소의 경계외부로 마우스가 나갔을때 이벤트 발생
+            // mouseout : 선택된 요소의 경계외부로 마우스가 나갔을 때 이벤트 발생
             $(":submit").mouseout(function(){
+                //$(this).css("backgroundColor", "");
+                $(this).removeClass("purpleStyle");
+                // removeClass() 메소드 : 클래스 제거해주는 메소드
+            });
+            */
+
+            // hover : mouseenter + mouseout
+            $(":submit").hover(function(){
+                $(this).addClass("purpleStyle");
+            }, function(){
                 $(this).removeClass("purpleStyle");
             });
 
-
-            // $(":submit").hover
-            
-            
-
-        }) */
+        })
     </script>
 
     <hr>
 
-    <h3>* 상태(checked, selected, disabled, enabled) 선택자</h3>
+    <h3>* 상태(checked, selected, disabled, enabled) 선택자 </h3>
 
-    <h4> - checked상태 선택자 (checkbox, radio) </h4>
+    <h4>- checked 상태 선택자 (checkbox, radio)</h4>
 
     취미 : 
     <input type="checkbox" name="hobby" value="game" checked> 게임
@@ -168,25 +175,28 @@
 
     <script>
         $(function(){
-            // $("input:checked").css({width:"50px", height:"50px"});
+            
+            //$("input:checked").css({width:"50px", height:"50px"});
 
-            // 타입이 checkbox인 요소들의 값이 변경 되는 이벤트 발생시 실행할 내용
+            // 타입이 checkbox인 요소들에 값이 변경되는 이벤트발생시 실행할 내용
             $("input:checkbox").change(function(){
+                //console.log("값 변경됨!!");
                 console.log($(this).prop("checked"));
 
-                if($(this).prop("checked")){
+                if($(this).prop("checked")){ // 현재이벤트가 발생한 요소의 checked가 true일경우
                     $(this).css({width:"50px", height:"50px"});
-                }else { 
+                }else{ // 그게아닐경우
                     $(this).css({width:"", height:""});
                 }
             })
+
         })
     </script>
 
     <h4>- selected 상태 선택자 (select>option)</h4>
 
-    국가 :
-    <select name="national" >
+    국가 : 
+    <select name="national">
         <option value="x">선택안함</option>
         <option value="ko">한국</option>
         <option value="us">미국</option>
@@ -196,15 +206,15 @@
     <button type="button" id="btn">확인</button>
     <br>
 
-    선택한 나라 : <label for=""></label>
+    선택한 나라 : <label id="result">선택안함</label>
 
     <script>
         $(function(){
 
             $("#btn").click(function(){ // 확인 버튼 클릭시 실행할 function
 
-                // 현재 선택 (selected)된 option의 value값 가져오기
-                // console.log($("option:selected").val());
+                // 현재 선택(selected)된 option의 value값 가져오기
+                //console.log($("option:selected").val());
 
                 $("#result").html($("option:selected").val());
 
@@ -220,8 +230,7 @@
         비활성화텍스트상자 : <input type="text" disabled> <br>
 
         활성화버튼 : <input type="button" value="활성화버튼"> <br>
-        비활성화버튼 : <input type="button" value="비활성화버튼" disabled> <br>
-
+        비활성화버튼 : <input type="button" value="비활성화버튼" disabled>
     </div>
 
     <script>
@@ -235,14 +244,9 @@
 
 
 
+    
 
 
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

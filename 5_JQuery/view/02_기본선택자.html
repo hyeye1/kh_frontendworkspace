@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div, span{
+
+        }
+    </style>
 </head>
 <body>
     
@@ -21,15 +26,19 @@
             document.getElementById("id1").innerHTML = "h1변경";
 
             // jQuery 방식 => $("#아이디명")
-            $('#id2').css("color", "pink"); // 요소객체.style.color = "pink";
-            $('#id2').html("h2변경"); 
+            $("#id2").css("color", "pink"); // 요소객체.style.color = "pink";
+            $("#id2").html("h2변경");       // 요소객체.innerHTML = "h2변경";
+
+            // 즉, 어떤 요소를 순수 자바스크립트 방식으로 선택하냐,
+            //     jQuery 방식으로 선택하냐에 따라서 각기 다른 방식으로 접근해야됨
+
 
         })
     </script>
 
     <hr>
 
-    <h3> * 태그선택자</h3>
+    <h3>* 태그선택자</h3>
 
     <p>JAVA</p>
     <p>Oracle</p>
@@ -42,25 +51,26 @@
     <script>
         $(document).ready(function(){
 
-            // 순수 자바 스크립트 방식 --> document.getElementsByTagName("태그명") => 배열
-            var p = document.getElementsByTagName("p"); // [p, p, ...]
+            // 순수 자바스크립트 방식 --> document.getElementsByTagName("태그명") => 배열
+            var p = document.getElementsByTagName("p"); // [p, p, ..]
 
-            // p.style.color = "red";
+            //p.style.color = "red";
             for(var i=0; i<p.length; i++){
                 p[i].style.color = "red";
             }
 
             // jQuery 방식 --> $("태그명")
-            $("h5").css("color", "blue")
+            $("h5").css("color", "blue");
 
-            // 여러 종류의 태그들을 동시에 선택하는 것도 가능
+            // 여러 종류의 태그들을 동시에 선택하는것도 가능
             $("p, h5, #id1").css("backgroundColor", "yellow");
+
         })
     </script>
 
     <hr>
 
-    <h3> * 클래스 선택자 </h3>
+    <h3>* 클래스 선택자</h3>
     <p>특정한 클래스 속성을 가진 요소들 선택하고자 할 때 사용</p>
 
     <h1 class="item">Class1</h1>
@@ -69,8 +79,8 @@
 
     <script>
         $(document).ready(function(){
-            // 순수 자바 스크립트 방식 --> document.getElementsByClassName("클래스명")
-            var items = document.getElementsByClassName("item"); // [h1, h2, h3]
+            // 순수자바스크립트 방식 --> document.getElementsByClassName("클래스명") => 배열
+            var items = document.getElementsByClassName("item"); // [h1, h1, h1]
             for(var i=0; i<items.length; i++){
                 items[i].style.color = "orange";
 
@@ -78,13 +88,12 @@
                     console.log("클릭됨");
                 }
             }
-            
+
             // jQuery 방식 --> $(".클래스명")
             $(".select").css("backgroundColor", "pink");
             $(".select").click(function(){
                 alert("클릭됨!");
             });
-
             // .click() 메소드 : 클릭이벤트와 관련된 기능 수행
 
             // 자바스크립트방식의 이벤트연결
@@ -92,47 +101,36 @@
 
             // jQuery 방식의 이벤트연결
             // 선택된요소.이벤트명(function(){  });
-        
+
         })
     </script>
 
-    <!-- 
+    <!--
 
-        * dom 요소 선택하는 방법
-                        자바스크립트 방식                   |       jQuery방식
-        ------------------------------------------------------------------------------
-                documents.getElementById("아이디명")        |   $("#아이디명")
-              documents.getElementsByTagName("태그명")      |     $("태그명")
-            document.getElementsByClassName("클래스명")     |   $(".클래스명")
+        * dom요소 선택하는 방법
 
-        
-        * 선택된 dom 요소에 속성을 변경하고자 할 때 방법
-                        자바스크립트 방식                   |       jQuery방식
-        (선택된 요소객체의 속성에 직접접근해서 대입하는 방식) | (선택된 요소 객체의 메소드 이용)
-        -----------------------------------------------------------------------------------
-        스타일관련 |    .style.스타일속성 = "변경할값"       |   .css("스타일속성", "변경할값")
-          내용관련 |  .innerHTML|innerText = "변경할값"     |      .html|text("변경할값")
-        이벤트관련 |     .on이벤트명 = function(){  }       |    .이벤트명(function(){  })
-            
-
-        
+                        자바스크립트 방식              |     jQuery 방식
+        ---------------------------------------------------------------------
+                document.getElementById("아이디명")    |    $("#아이디명")
+              document.getElementsByTagName("태그명")  |     $("태그명")
+           document.getElementsByClassName("클래스명") |    $(".클래스명")
 
 
+        * 선택된 dom요소에 속성 변경하고자 할 때 방법
 
+                        자바스크립트 방식               |          jQuery 방식
+     (선택된요소객체에 속성에 직접접근해서 대입하는 방식) | (선택된요소객체에 메소드 이용)
+     ------------------------------------------------------------------------------------------
+     스타일관련 |   .style.스타일속성 = "변경할값"       |   .css("스타일속성", "변경할값")
+       내용관련 | .innerHTML|innerText = "변경할값"     |       .html|text("변경할값")
+     이벤트관련 |    .on이벤트명 = function(){ }        |     .이벤트명(function(){ })
 
-
-            -->
+    -->
 
 
 
 
 
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

@@ -8,9 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <h3> * 필터 관련 선택자 </h3>
+    <h3>* 필터 관련 선택자</h3>
 
-    <table border=1px>
+    <table border="1">
         <tr>
             <th>이름</th>
             <th>혈액형</th>
@@ -28,11 +28,11 @@
         </tr>
         <tr>
             <td>김삼순</td>
-            <td>o형</td>
+            <td>O형</td>
             <td>부산</td>
         </tr>
         <tr>
-            <th colspan="2" >총인원</th>
+            <th colspan="2">총인원</th>
             <td>3명</td>
         </tr>
     </table>
@@ -41,14 +41,16 @@
         $(function(){
             $("tr:first").css({backgroundColor:"black", color:"white"});
             $("tr:last").css({backgroundColor:"red", color:"white"});
-            $("tr:even").css("backgroundColor", "lightgray");
-            $("tr:odd").css("backgroundColor" , "yellow");
+            $("tr:even").css("backgroundColor", "lightgray"); // 짝수번째인덱스
+            $("tr:odd").css("backgroundColor", "yellow"); // 홀수번째인덱스
         })
     </script>
 
-    <h3>* 필터링과 관련된 메소드 </h3>
+    <hr>
+
+    <h3>* 필터링과 관련된 메소드</h3>
     <p>
-        기준이 되는 요소들 중에서 특정 요소만을 걸러서 선택해주는 메소드 <br>
+        기준이되는 요소들 중에서 특정 요소만을 걸러서 선택해주는 메소드 <br>
         first(), last(), filter(), eq(), not()
     </p>
 
@@ -64,34 +66,12 @@
             $("h4").first().css("font-size", "20px");
             $("h4").last().css("font-size", "30px");
 
-            $("h4").filter(".test").text("ㅋㅋㅋ");
-            $("h4").not(".test").css("color", "red");
+            $("h4").filter(".test").text("ㅋㅋㅋㅋ");
+            $("h4").not(".test").css("color", "Red");
 
             $("h4").eq(2).text("eq로 선택됨");
         })
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
